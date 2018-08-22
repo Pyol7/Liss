@@ -1,0 +1,47 @@
+{
+  "mList": [
+    {
+      "thickness": 0.5,
+      "width": 4.0,
+      "length": 8.0,
+      "name": "Test User List",
+      "price": 7400,
+      "type": "Board"
+    },
+    {
+      "thickness": 0.5,
+      "width": 4.0,
+      "length": 8.0,
+      "name": "Regular Boards",
+      "price": 7400,
+      "type": "Board"
+    },
+    {
+      "width": 2.5,
+      "length": 9.0,
+      "name": "Metal Studs",
+      "price": 1540,
+      "type": "Stud"
+    },
+    {
+      "width": 2.5,
+      "length": 10.0,
+      "name": "Metal Tracks",
+      "price": 1800,
+      "type": "Stud"
+    },
+    {
+      "length": 1.25,
+      "name": "Drywall Screws",
+      "price": 20,
+      "type": "Screw"
+    },
+    {
+      "length": 0.75,
+      "name": "Framing Screws",
+      "price": 12,
+      "type": "Screw"
+    }
+  ],
+  "name": "TestMaterialList"
+}

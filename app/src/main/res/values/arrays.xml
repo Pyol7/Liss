@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="project_lists">
+        <item >Fairways</item>
+        <item >Arima House</item>
+        <item >La Riviera Apartment</item>
+        <item >Tobago Met Office</item>
+        <item >Point Fortain Hospital</item>
+    </string-array>
+
+    <string-array name="material_lists">
+        <item >Ceiling - Regular Board</item>
+        <item >Ceiling - Ultra Light Board</item>
+        <item >Ceiling - Moisture Resistant Board</item>
+        <item >Ceiling - Concrete Board</item>
+        <item >Partition - Regular Board</item>
+        <item >Partition - Moisture Resistant Board</item>
+        <item >Partition - Concrete Board</item>
+    </string-array>
+</resources>
