@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Spinner
-        android:id="@+id/newMaterialSpinner"
+        android:id="@+id/listsSpinner"
         style="@android:style/Widget.Holo.Light.Spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

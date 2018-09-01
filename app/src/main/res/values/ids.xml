@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_add" type="id" />
+    <item name="action_material_lists" type="id"/>
+    <item name="action_save" type="id" />
+</resources>

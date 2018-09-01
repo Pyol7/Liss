@@ -12,20 +12,21 @@ import android.widget.EditText;
 
 import com.jeffreyromero.liss.R;
 
-/**
- * Displays a single input dialog.
- * @newInstance(param) title of the dialog.
- * @return (String) one user input.
- */
 public class SingleInputDialog extends DialogFragment {
     public OnDialogSubmitListener Listener;
 
-    public static SingleInputDialog newInstance(String title, String input) {
+    /**
+     * Displays a single input dialog.
+     * @param title The title of the dialog.
+     * @param placeholder The placeholder text.
+     * @return
+     */
+    public static SingleInputDialog newInstance(String title, String placeholder) {
         SingleInputDialog fragment = new SingleInputDialog();
         //Add it to the bundle.
         Bundle args = new Bundle();
         args.putString("title", title);
-        args.putString("input", input);
+        args.putString("placeholder", placeholder);
         //Set the bundle to the fragment and return it.
         fragment.setArguments(args);
         return fragment;
@@ -54,13 +55,12 @@ public class SingleInputDialog extends DialogFragment {
         // Inflate view
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View dialogView = inflater.inflate(R.layout.single_input_dialog, null);
-        // Get the title and input from the bundle.
+        // Get the title and placeholder from the bundle.
         String title = getArguments().getString("title");
-        String input = getArguments().getString("input");
-        // Get the EditText input.
+        String placeholder = getArguments().getString("placeholder");
+        // Set the placeholder to the inputET.
         final EditText inputET = dialogView.findViewById(R.id.inputET);
-        // Set the input value.
-        inputET.setText(input);
+        inputET.setText(placeholder);
         //Build dialog
         final AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
         dialog.setView(dialogView);
@@ -71,8 +71,11 @@ public class SingleInputDialog extends DialogFragment {
 
                 // Get user input
                 String userInput = inputET.getText().toString();
-                // Pass userInput to parent fragment.
-                Listener.OnSingleInputDialogSubmit(userInput);
+                // Pass userInput to the listener if it's not empty.
+                // The listener is then responsible for it's use.
+                if (!userInput.isEmpty()) {
+                    Listener.OnSingleInputDialogSubmit(userInput);
+                }
 
             }
         });
